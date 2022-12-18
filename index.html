@@ -85,6 +85,7 @@
 
       for (var i = 0; i < 10; i++) {
   drawRandomLine();
+  playBackgroundMusic('sample1.mp3');
 }
 
 // or
@@ -109,6 +110,17 @@ function drawRandomLine() {
 
     // start animation
     drawSeagulls();
+
+
+    function playBackgroundMusic(mp3FileUrl) {
+  var audioElement = document.createElement('audio');
+  audioElement.setAttribute('src', mp3FileUrl);
+  audioElement.setAttribute('autoplay', 'autoplay');
+  audioElement.setAttribute('loop', 'loop');
+  document.body.appendChild(audioElement);
+}
+
+
   </script>
 </body>
 </html>
